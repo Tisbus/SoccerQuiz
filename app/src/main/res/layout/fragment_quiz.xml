@@ -3,7 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".QuizFragment">
+    <data>
 
+        <variable
+            name="quizFragment"
+            type="com.example.soccerquiz.QuizFragment" />
+
+    </data>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -76,19 +82,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="First variant" />
+                    android:text="@{quizFragment.quizCurrent[0]}"
+                    tools:text="First variant" />
 
                 <RadioButton
                     android:id="@+id/radioButtonSecond"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Second variant" />
+                    android:text="@{quizFragment.quizCurrent[1]}"
+                    tools:text="Second variant" />
 
                 <RadioButton
                     android:id="@+id/radioButtonThird"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Third variant" />
+                    android:text="@{quizFragment.quizCurrent[2]}"
+                    tools:text="Third variant" />
             </RadioGroup>
 
             <TextView
@@ -96,7 +105,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/question"
+                android:text="@{quizFragment.currentQuizItem.question}"
+                tools:text="@string/question"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toTopOf="@+id/radioGroupQuiz"

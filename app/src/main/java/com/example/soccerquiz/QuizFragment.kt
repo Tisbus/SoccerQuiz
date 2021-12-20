@@ -42,12 +42,29 @@ class QuizFragment : Fragment() {
             listOf("2.44m high, 7.32m wide", "2.55m high, 7.62m wide", "2.33m high, 8.15m wide"))
     )
 
+    private var quizItemsIndex = 0;
+    lateinit var currentQuizItem : QuizItem
+    lateinit var quizCurrent : MutableList<String>
+    private  val numberOfQuestions = 3
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentQuizBinding>(inflater, R.layout.fragment_quiz, container, false)
+
+        quizRandomQuestions()
+
+        binding.quizFragment = this
+
         return binding.root
+    }
+
+    private fun quizRandomQuestions() {
+        quizItems.shuffle()
+        currentQuizItem = quizItems[quizItemsIndex]
+        quizCurrent = currentQuizItem.answer.toMutableList()
+        quizCurrent.shuffle()
     }
 }
