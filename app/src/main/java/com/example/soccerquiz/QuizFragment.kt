@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.example.soccerquiz.databinding.FragmentQuizBinding
 
 
@@ -45,7 +47,10 @@ class QuizFragment : Fragment() {
     private var quizItemsIndex = 0;
     lateinit var currentQuizItem : QuizItem
     lateinit var quizCurrent : MutableList<String>
-    private  val numberOfQuestions = 3
+    private val numberOfQuestions = 3
+    private var numGoodAnswers = 0
+    private var numTryAnswers = 2
+    private var rightAnswer = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,7 +61,32 @@ class QuizFragment : Fragment() {
 
         quizRandomQuestions()
 
+
         binding.quizFragment = this
+
+        binding.buttonPass.setOnClickListener { view : View ->
+            if(numGoodAnswers == numberOfQuestions){
+                Toast.makeText(context, "Win", Toast.LENGTH_SHORT).show()
+                 /*Navigation.findNavController(view).navigate(R.id.action_wellcomeFragment_to_quizFragment)*/
+            }else if(numTryAnswers == 0){
+                Toast.makeText(context, "Game Over", Toast.LENGTH_SHORT).show()
+                 /*Navigation.findNavController(view).navigate(R.id.action_wellcomeFragment_to_quizFragment)*/
+            }else{
+                if (binding.radioButtonFirst.isChecked && binding.radioButtonFirst.text == rightAnswer){
+                    numGoodAnswers++
+                    quizRandomQuestions()
+                }else if(binding.radioButtonSecond.isChecked && binding.radioButtonSecond.text == rightAnswer){
+                    numGoodAnswers++
+                    quizRandomQuestions()
+                }else if(binding.radioButtonThird.isChecked && binding.radioButtonThird.text == rightAnswer){
+                    numGoodAnswers++
+                    quizRandomQuestions()
+                }else{
+                    numTryAnswers--
+                    quizRandomQuestions()
+                }
+            }
+        }
 
         return binding.root
     }
@@ -65,6 +95,7 @@ class QuizFragment : Fragment() {
         quizItems.shuffle()
         currentQuizItem = quizItems[quizItemsIndex]
         quizCurrent = currentQuizItem.answer.toMutableList()
+        rightAnswer = quizCurrent[0]
         quizCurrent.shuffle()
     }
 }
