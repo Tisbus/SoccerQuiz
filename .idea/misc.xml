@@ -5,10 +5,17 @@
       <map>
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/drawable/soccer_background.xml" value="0.5234375" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/activity_main.xml" value="0.48541666666666666" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/content_drawer.xml" value="0.40925925925925927" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_ball_features.xml" value="0.503125" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_goal.xml" value="0.503125" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_miss.xml" value="0.503125" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_quiz.xml" value="0.4933605720122574" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_rules.xml" value="0.503125" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_slideshow.xml" value="0.503125" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_wellcome.xml" value="0.503125" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/nav_drawer_header.xml" value="0.40925925925925927" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/menu/main_menu.xml" value="0.503125" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/menu/naw_drawer_menu.xml" value="0.503125" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.5234375" />
       </map>
     </option>
