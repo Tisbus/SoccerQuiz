@@ -3,10 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Java/SoccerQuiz/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Java/SoccerQuiz/app/src/main/res/layout/fragment_quiz.xml" value="0.36666666666666664" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/drawable/soccer_background.xml" value="0.5234375" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/activity_main.xml" value="0.48541666666666666" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_goal.xml" value="0.503125" />
+        <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_miss.xml" value="0.503125" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_quiz.xml" value="0.4933605720122574" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/layout/fragment_wellcome.xml" value="0.503125" />
         <entry key="..\:/Other/SoccerQuiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.5234375" />

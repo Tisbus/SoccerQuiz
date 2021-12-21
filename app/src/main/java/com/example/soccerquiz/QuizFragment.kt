@@ -66,11 +66,9 @@ class QuizFragment : Fragment() {
 
         binding.buttonPass.setOnClickListener { view : View ->
             if(numGoodAnswers == numberOfQuestions){
-                Toast.makeText(context, "Win", Toast.LENGTH_SHORT).show()
-                 /*Navigation.findNavController(view).navigate(R.id.action_wellcomeFragment_to_quizFragment)*/
+                 Navigation.findNavController(view).navigate(R.id.action_quizFragment_to_goalFragment)
             }else if(numTryAnswers == 0){
-                Toast.makeText(context, "Game Over", Toast.LENGTH_SHORT).show()
-                 /*Navigation.findNavController(view).navigate(R.id.action_wellcomeFragment_to_quizFragment)*/
+                Navigation.findNavController(view).navigate(R.id.action_quizFragment_to_missFragment)
             }else{
                 if (binding.radioButtonFirst.isChecked && binding.radioButtonFirst.text == rightAnswer){
                     numGoodAnswers++
