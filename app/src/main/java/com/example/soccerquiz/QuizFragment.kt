@@ -123,6 +123,9 @@ class QuizFragment : Fragment() {
             }
         }
         */
+        fun ballTranslate(){
+            binding.imageViewBall.animate().rotation(2000f).translationX(1000f).duration=5000
+        }
 
         binding.buttonPass.setOnClickListener { view: View ->
 
@@ -142,6 +145,7 @@ class QuizFragment : Fragment() {
                     quizItemsIndex++
                     if (quizItemsIndex < numberOfQuestions) {
                         quizNewQuestion()
+                        ballTranslate()
                         binding.invalidateAll()
                     } else {
                         view.findNavController().navigate(R.id.action_quizFragment_to_goalFragment)
@@ -152,6 +156,8 @@ class QuizFragment : Fragment() {
 
             }
         }
+
+
 
         (activity as AppCompatActivity).supportActionBar?.title = "Soccer Quiz"
 
