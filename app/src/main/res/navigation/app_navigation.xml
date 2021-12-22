@@ -52,10 +52,20 @@
         android:id="@+id/rulesFragment"
         android:name="com.example.soccerquiz.RulesFragment"
         android:label="fragment_rules"
-        tools:layout="@layout/fragment_rules" />
+        tools:layout="@layout/fragment_rules" >
+        <action
+            android:id="@+id/action_rulesFragment_to_wellcomeFragment"
+            app:destination="@id/wellcomeFragment"
+            app:popUpTo="@id/wellcomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/ballFeaturesFragment"
         android:name="com.example.soccerquiz.BallFeaturesFragment"
         android:label="fragment_ball_features"
-        tools:layout="@layout/fragment_ball_features" />
+        tools:layout="@layout/fragment_ball_features" >
+        <action
+            android:id="@+id/action_ballFeaturesFragment_to_wellcomeFragment"
+            app:destination="@id/wellcomeFragment"
+            app:popUpTo="@id/wellcomeFragment" />
+    </fragment>
 </navigation>
