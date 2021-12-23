@@ -23,7 +23,7 @@ class MissFragment : Fragment() {
         binding.missFrag = this
 
         binding.buttonPass.setOnClickListener { view : View ->
-            Navigation.findNavController(view).navigate(R.id.action_missFragment_to_wellcomeFragment)
+            Navigation.findNavController(view).navigate(R.id.action_missFragment_to_quizFragment)
         }
 
         (activity as AppCompatActivity).supportActionBar?.title = "Soccer Quiz"

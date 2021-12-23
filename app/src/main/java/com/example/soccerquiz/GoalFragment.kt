@@ -22,7 +22,7 @@ class GoalFragment : Fragment() {
         binding.goalFrag = this
 
         binding.buttonPass.setOnClickListener { view : View ->
-            Navigation.findNavController(view).navigate(R.id.action_goalFragment_to_wellcomeFragment)
+            Navigation.findNavController(view).navigate(R.id.action_goalFragment_to_quizFragment)
         }
 
         (activity as AppCompatActivity).supportActionBar?.title = "Soccer Quiz"
